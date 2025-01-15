@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  servlet:
+    charset: utf-8 #서블릿의 응답과 요청 인코딩을 UTF-8로 설정 
+    force: true
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/view #JSP 파일이 위치한 디렉토리 접두사로 설정
+      suffix: .jsp # 뷰 이름에 자동으로 추가될 파일 확장자  
+  datasource:
+    url: jdbc:h2:mem:bankdb;MODE=MySQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: '' #DB 비밀번호 빈 문자열로 설정
+  h2:
+    console:
+      enabled: true #H2 데이터 베이스 콘솔을 활성화 합니다. 	
+ 
