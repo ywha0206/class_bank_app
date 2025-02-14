@@ -1,5 +1,6 @@
 package com.tenco.bank.controller;
 
+import com.tenco.bank.handler.exception.RedirectException;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,11 +16,6 @@ public class MainController {
 	@GetMapping({"/main-page", "/index", "/"})
 	// @ResponseBody
 	public String mainPage() {
-		System.out.println("mainPage() 호출 확인");
-		// [JSP 파일 찾기 (yml 설정) ] - 뷰 리졸버 
-		// prefix: /WEB-INF/view
-		//         /main  
-		// suffix: .js 
 		return "/main";
 	}
 	

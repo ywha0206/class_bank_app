@@ -1,16 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<!-- header.jsp  -->
+<!-- header.jsp -->
 <%@ include file="/WEB-INF/view/layout/header.jsp"%>
 
-<!-- start of content.jsp(xxx.jsp)   -->
+<!-- start of content.jsp(메인 영역)   -->
 <div class="col-sm-8">
-	<h2>계좌목록(인증)</h2>
-	<h5>Bank App에 오신걸 환영합니다</h5>
-	
-	<c:choose>
-		<c:when test="${accountList != null}">
-			<%-- 계좌 존재 : html 주석을 사용하면 오류 발생 (jstl 태그 안에서)  --%>
+	<h2>계좌 목록(인증)</h2>
+	<h5>Bank App 오신 걸 환영합니다.</h5>
+		<c:choose>
+		<c:when test="${accountList != null }">
 			<table class="table">
 				<thead>
 					<tr>
@@ -19,30 +17,29 @@
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach  var="account" items="${accountList}">
+					<c:forEach var="account" items="${accountList}">
 						<tr>
-							<td><a href="/account/detail/${account.id}?type=all">${account.number}</a></td>
-							<td>${account.formatKoreanWon(account.balance)}</td>
+							<td>${account.number}</td>
+							<td>${account.balance}</td>
 						</tr>
 					</c:forEach>
-				</tbody>	
+
+				</tbody>
 			</table>
 		</c:when>
 		<c:otherwise>
-			<div class="jumbotron display-4">
-				<h5>아직 생성된 계좌가 없습니다.</h5>
-			</div>
+		<div class="jumbotron display-4">
+			<h5><small>아직 생성된 계좌가 없습니다</small></h5>
+		</div>
 		</c:otherwise>
 	</c:choose>
-		
-</div>
-<!-- end of col-sm-8  -->
 </div>
 </div>
-<!-- end of content.jsp(xxx.jsp)   -->
+</div>
 
-<!-- footer.jsp  -->
+<!-- end of content.jsp(메인 영역)   -->
+
+<!-- footer.jsp -->
 <%@ include file="/WEB-INF/view/layout/footer.jsp"%>
-
 
 
