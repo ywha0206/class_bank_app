@@ -2,6 +2,7 @@ package com.tenco.bank.repository.interfaces;
 
 import java.util.List;
 
+import com.tenco.bank.dto.HistoryAccountDTO;
 import org.apache.ibatis.annotations.Mapper;
 import com.tenco.bank.repository.model.Account;
 import org.apache.ibatis.annotations.Param;
@@ -25,6 +26,7 @@ public interface AccountRepository {
     // --> account id 값으로 계좌 정보 조회
     public Account findByNumber(@Param("number") String id);
 
-    // 코드 추가 예정
+    // account pk로 조회하는 기능
+    public Account findByAccountId(Integer accountId);
 
 }

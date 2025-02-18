@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"><!-- dtd : 도큐먼트 타입 데피니션  -->
 <mapper namespace="com.tenco.bank.repository.interfaces.AccountRepository">
+
 
     <insert id="insert">
         insert into account_tb(number, password, balance, user_id, created_at)
@@ -29,4 +30,9 @@
     <select id="findAllByUserId" resultType="com.tenco.bank.repository.model.Account">
         select * from account_tb where user_id = #{userId}
     </select>
+
+    <select id="findByAccountId" resultType="com.tenco.bank.repository.model.Account">
+        select * from account_tb where id = #{accountId}
+    </select>
+
 </mapper>

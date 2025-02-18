@@ -34,4 +34,5 @@ public class Define {
 	public static final String INVALID_INPUT = "잘못된 입력입니다.";
 	public static final String UNKNOWN = "알 수 없는 동작입니다";
 	public static final String FAILED_PROCESSING = "정상 처리 되지 않았습니다.";
-}	
+	public static final String INVALID_ACCESS = "유효하지 않은 접근입니다.";
+}

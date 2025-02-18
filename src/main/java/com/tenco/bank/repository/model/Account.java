@@ -57,4 +57,8 @@ public class Account {
         }
     }
 
+    public String formatKoreanWon(Long balance) {
+        return String.format("%,d원", balance);
+    }
+
 }
