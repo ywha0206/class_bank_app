@@ -53,7 +53,7 @@
 						<!-- start of 코드 수정  -->
 						<!-- 1. 로그인 유무 확인  -->
 						<c:choose>
-							<c:when test="${principal != nul }">
+							<c:when test="${principal != null }">
 								<img class="m--profile" alt="" src="${principal.setUpUserImage()}">
 							</c:when>
 							<c:otherwise>

@@ -19,6 +19,7 @@ public class User {
     private Timestamp createdAt;
 
     private String uploadFileName;
+    private String originFileName;
 
     public String setUpUserImage() {
         return uploadFileName == null

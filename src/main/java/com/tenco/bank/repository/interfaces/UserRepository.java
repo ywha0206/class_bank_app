@@ -20,4 +20,5 @@ public interface UserRepository {
     // 주의!! - 파미리터가 2개 이상일 경우 @Param 어노테니션을 반드시 선언
     public User findByUsernameAndPassword(@Param("username") String username, @Param("password") String password);
 
+    public User findByUsername(String username);
 }
