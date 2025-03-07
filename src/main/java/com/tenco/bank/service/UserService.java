@@ -144,4 +144,13 @@ public class UserService {
         // 파일까지 생성 --> 원본사진명, 새로 생성한 파일명
         return new String[] {mFile.getOriginalFilename(), uploadFileName};
     }
+
+    /**
+     * 코드 추가
+     * @param username
+     * @return
+     */
+    public User searchUsername(String username) {
+        return userRepository.findByUsername(username);
+    }
 }
